@@ -8,4 +8,12 @@
   <artifactId>service</artifactId>
   <name>bootpress-service</name>
   <description>业务层</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>net.coderdaily</groupId>
+      <artifactId>persistence</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>

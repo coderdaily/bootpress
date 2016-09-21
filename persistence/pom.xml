@@ -8,4 +8,12 @@
   <artifactId>persistence</artifactId>
   <name>bootpress-persistence</name>
   <description>持久层</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>net.coderdaily</groupId>
+      <artifactId>bean</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>
