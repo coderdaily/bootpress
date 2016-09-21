@@ -15,3 +15,23 @@ https://github.com/coderdaily/bootpress.git
 
 #### 表结构
 
+1. bp_user-用户表
+
+```
+CREATE TABLE `bp_user` (
+  `sid` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(128) NOT NULL COMMENT '用户名',
+  `password` varchar(128) DEFAULT NULL,
+  `email` varchar(64) DEFAULT NULL,
+  `gender` bit(1) DEFAULT NULL,
+  `qq` varchar(16) DEFAULT NULL,
+  `wechat` varchar(32) DEFAULT NULL,
+  `weibo` varchar(64) DEFAULT NULL,
+  `created_time` datetime DEFAULT NULL COMMENT '创建时间',
+  PRIMARY KEY (`sid`,`username`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+
+```
