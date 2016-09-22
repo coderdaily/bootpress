@@ -46,20 +46,19 @@ CREATE TABLE `bp_user` (
 CREATE TABLE `bp_content` (
   `sid` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) DEFAULT NULL,
-  `text` longtext,
+  `content` longtext,
   `user_sid` bigint(20) unsigned DEFAULT NULL,
-  `status` varchar(32) DEFAULT NULL,
+  `status` int(2) DEFAULT NULL,
   `vote_up` int(11) unsigned DEFAULT '0',
   `vote_down` int(11) unsigned DEFAULT '0',
-  `comment_status` varchar(32) DEFAULT NULL,
+  `comment_status` int(2) DEFAULT NULL,
   `comment_count` int(11) unsigned DEFAULT '0',
   `view_count` int(11) unsigned DEFAULT '0',
   `created_time` datetime DEFAULT NULL,
   `modified_time` datetime DEFAULT NULL,
-  `flag` varchar(256) DEFAULT NULL,
+  `flag` int(2) DEFAULT NULL,
   PRIMARY KEY (`sid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
 
 ```
 3. bp_commont-评论表
