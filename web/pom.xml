@@ -6,7 +6,20 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>web</artifactId>
-  
+
+  <dependencies>
+      <dependency>
+          <groupId>net.coderdaily</groupId>
+          <artifactId>service</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+          <groupId>net.coderdaily</groupId>
+          <artifactId>util</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+      </dependency>
+  </dependencies>
+
   <!-- 约定三套环境配置 begin -->
     <profiles>
         <profile>

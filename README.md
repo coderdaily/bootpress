@@ -3,6 +3,8 @@
 SpringBoot 1.4.0.RELEASE
 Maven
 Mysql
+JPA 
+JDK
 
 #### 项目启动
 
