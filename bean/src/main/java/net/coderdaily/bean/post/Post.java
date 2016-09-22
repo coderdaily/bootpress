@@ -5,6 +5,7 @@ package net.coderdaily.bean.post;
  * Time: 2016/9/21 22:34
  * Blog: coderdaily.net
  */
+
 public class Post {
 
 }

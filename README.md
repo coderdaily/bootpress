@@ -5,6 +5,8 @@ Maven
 Mysql
 JPA 
 JDK
+Bootstrap
+Thymeleaf
 
 #### 项目启动
 
@@ -34,6 +36,44 @@ CREATE TABLE `bp_user` (
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+
+```
+2. bp_content-博客表
+```
+CREATE TABLE `bp_content` (
+  `sid` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `title` text,
+  `text` longtext,
+  `user_sid` bigint(20) unsigned DEFAULT NULL,
+  `status` varchar(32) DEFAULT NULL,
+  `vote_up` int(11) unsigned DEFAULT '0',
+  `vote_down` int(11) unsigned DEFAULT '0',
+  `comment_status` varchar(32) DEFAULT NULL,
+  `comment_count` int(11) unsigned DEFAULT '0',
+  `view_count` int(11) unsigned DEFAULT '0',
+  `created_time` datetime DEFAULT NULL,
+  `modified_time` datetime DEFAULT NULL,
+  `flag` varchar(256) DEFAULT NULL,
+  PRIMARY KEY (`sid`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+
+```
+3. bp_commont-评论表
+```
+CREATE TABLE `bp_commont` (
+  `sid` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `parent_sid` bigint(20) unsigned DEFAULT NULL,
+  `content_sid` bigint(20) unsigned DEFAULT NULL,
+  `user_sid` bigint(20) unsigned DEFAULT NULL,
+  `content` longtext,
+  `created` datetime DEFAULT NULL,
+  `status` varchar(32) DEFAULT NULL,
+  `vote_up` int(11) unsigned DEFAULT '0',
+  `vote_down` int(11) unsigned DEFAULT '0',
+  PRIMARY KEY (`sid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 ```
