@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Shopin Projectss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="../static/bootstrap-3.3.6/css/bootstrap.min.css" th:href="@{../bootstrap-3.3.6/css/bootstrap.min.css}" rel="stylesheet"/>
+    <script src="../static/jquery/jquery-2.2.3.js" th:src="@{../jquery/jquery-2.2.3.js}"></script>
+    <script src="../static/bootstrap-3.3.6/js/bootstrap.min.js" th:src="@{../bootstrap-3.3.6/js/bootstrap.min.js}"></script>
+</head>
+<body>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th >sid</th>
+                <th >NAME</th>
+                <th >URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="u:${urls}">
+                <td th:text="${u.sid}">the sid</td>
+                <td th:text="${u.name}">the name</td>
+                <td th:text="${u.url}">the name</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

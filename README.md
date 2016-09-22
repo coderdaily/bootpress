@@ -7,6 +7,8 @@ JPA
 JDK
 Bootstrap
 Thymeleaf
+jquery
+
 
 #### 项目启动
 
@@ -43,7 +45,7 @@ CREATE TABLE `bp_user` (
 ```
 CREATE TABLE `bp_content` (
   `sid` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `title` text,
+  `title` varchar(255) DEFAULT NULL,
   `text` longtext,
   `user_sid` bigint(20) unsigned DEFAULT NULL,
   `status` varchar(32) DEFAULT NULL,
