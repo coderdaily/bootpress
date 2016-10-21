@@ -29,6 +29,9 @@ public class ContentEntity {
     private Date modifiedTime;
     private Integer flag;
 
+    public ContentEntity() {
+    }
+
     public ContentEntity(String title, String content, Long userSid) {
         this.title = title;
         this.content = content;
