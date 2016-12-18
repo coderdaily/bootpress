@@ -6,6 +6,8 @@
 *.jar
 *.war
 *.ear
+/.idea/
+*.iml
 
 config/.settings/
 config/target/
